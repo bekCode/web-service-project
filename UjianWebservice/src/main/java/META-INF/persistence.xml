@@ -1,0 +1,28 @@
+
+
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+   
+    <persistence-unit name="com.bootcamp.Ujian.model" transaction-type="RESOURCE_LOCAL">
+        <class>com.bootcamp.Ujian.model.Group</class>
+        <class>com.bootcamp.Ujian.model.Personnel</class>
+        <class>com.bootcamp.Ujian.model.Position</class>
+        <class>com.bootcamp.Ujian.model.User</class>
+        <properties>
+       		<property name="hibernate.archive.autodetection" value="class" />
+       		 
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/programmer?serverTimezone=UTC" />
+			<property name="hibernate.connection.user" value="root" />
+			<property name="hibernate.connection.password" value="" />
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+ 
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="use_sql_comments" value="true" />
+			
+		</properties>
+    </persistence-unit>
+</persistence>
